@@ -41,9 +41,9 @@ function changeImage() {
   var PIC_THREE_URL = chrome.extension.getURL('images/siwon.png');
   [].forEach.call(document.getElementsByClassName('faceBox'), function (victim) {
     var rare = Math.random();
-    if(rare<0.3) { //one in ten pepes has the feels
+    if(rare<0.2) { //one in ten pepes has the feels
       return getImage(victim, PIC_TWO_URL);
-    } else if (rare < 0.15) { //one in twenty pepes is secretly an evil minion
+    } else if (rare < 0.3) { //one in twenty pepes is secretly an evil minion
       return getImage(victim, PIC_THREE_URL);
     } else {
       return getImage(victim, PIC_ONE_URL);
@@ -51,9 +51,9 @@ function changeImage() {
   });
   [].forEach.call(document.getElementsByClassName('tagBox'), function (victim) {
     var rare = Math.random();
-    if(rare<0.3) { //one in ten pepes has the feels
+    if(rare<0.2) { //one in ten pepes has the feels
       return getImage(victim, PIC_TWO_URL);
-    } else if (rare < 0.15) { //one in twenty pepes is secretly an evil minion
+    } else if (rare < 0.5) { //one in twenty pepes is secretly an evil minion
       return getImage(victim, PIC_THREE_URL);
     } else {
       return getImage(victim, PIC_ONE_URL);
