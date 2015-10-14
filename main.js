@@ -1,5 +1,6 @@
 'use strict';
 
+//get window from facebook
 function getWindow(element) {
   var win = element.getBoundingClientRect();
   return {
@@ -18,6 +19,7 @@ function getRidOf() {
   }
 }
 
+//get face
 function getImage(element, url) {
   var meme = new Image();
   meme.src = url;
@@ -33,16 +35,17 @@ function getImage(element, url) {
   document.body.appendChild(meme);
 }
 
+//replace the image
 function changeImage() {
   getRidOf();
-  var PIC_ONE_URL = chrome.extension.getURL('images/gd.png');
-  var PIC_TWO_URL = chrome.extension.getURL('images/smiling.png');
+  var PIC_ONE_URL = chrome.extension.getURL('images/1.png');
+  var PIC_TWO_URL = chrome.extension.getURL('images/2.png');
   var PIC_THREE_URL = chrome.extension.getURL('images/siwon.png');
   [].forEach.call(document.getElementsByClassName('faceBox'), function (victim) {
     var rare = Math.random();
-    if(rare<0.2) { 
+    if(rare<0.5) { 
       return getImage(victim, PIC_TWO_URL);
-    } else if (rare < 0.3) { 
+    } else if (rare < 0.5) { 
       return getImage(victim, PIC_THREE_URL);
     } else {
       return getImage(victim, PIC_ONE_URL);
@@ -50,7 +53,7 @@ function changeImage() {
   });
   [].forEach.call(document.getElementsByClassName('tagBox'), function (victim) {
     var rare = Math.random();
-    if(rare<0.2) { 
+    if(rare<0.5) { 
       return getImage(victim, PIC_TWO_URL);
     } else if (rare < 0.5) { 
       return getImage(victim, PIC_THREE_URL);

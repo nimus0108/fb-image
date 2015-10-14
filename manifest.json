@@ -8,6 +8,6 @@
     "matches" : ["https://www.facebook.com/*"],
     "js": ["main.js"]
   }],
-  "web_accessible_resources": ["images/gd.png", "images/siwon.png", "images/smiling.png"]
+  "web_accessible_resources": ["images/siwon.png", "images/1.png", "images/2.png"]
 }
 
